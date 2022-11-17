@@ -4,4 +4,4 @@
 
 #### Available adaptive for tablets and mobile devices.
 
-<img src = 'https://github.com/DmitriySoym/oline-zoo/blob/main/img/screenshot.png' alt='Project screenshot' width='100%'>
+<a href="https://dmitriysoym.github.io/oline-zoo/"><img src = 'https://github.com/DmitriySoym/oline-zoo/blob/main/img/screenshot.png' alt='Project screenshot' width='100%'></a>
