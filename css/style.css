@@ -418,7 +418,6 @@ h1 {
 .pets__item_info {
   background: #fff;
   padding-left: 14px;
-  padding-right: 1px;
   height: 60px;
 }
 
@@ -1462,10 +1461,6 @@ input[type=number] {
     padding-right: 30px;
     height: 1182px;
   }
-  .pets__item_info {
-    padding-left: 15px;
-    padding-bottom: 1px;
-  }
   .pets_btn {
     margin-top: 80px;
   }
@@ -1898,12 +1893,16 @@ input[type=number] {
   }
   .pets__item_name {
     transform: scale(0.75);
+    width: 100%;
   }
   .pets__item_icon {
     transform: scale(0.8);
     top: -7px;
     position: relative;
     right: -6px;
+  }
+  .pets__item_info {
+    height: 47px;
   }
   .pets_name {
     height: 16px;
@@ -1933,9 +1932,6 @@ input[type=number] {
     transform: scale(0.7);
     right: -33px;
     bottom: -27px;
-  }
-  .gorilla_name {
-    padding-left: 24px;
   }
   /*-----pick------*/
   .pick {
@@ -2278,7 +2274,7 @@ input[type=number] {
   }
 }
 /*---media---*/
-@media (max-width: 638.98px) {
+@media (max-width: 639.98px) {
   /*-----------header------*/
   .headerwrapper {
     padding: 0 10px;
@@ -2374,7 +2370,7 @@ input[type=number] {
   .pets__items {
     row-gap: 20px;
     justify-content: center;
-    max-width: 500px;
+    max-width: 490px;
   }
   .pets_name {
     left: -37px;
@@ -2391,6 +2387,11 @@ input[type=number] {
     transform: scale(0.37);
     bottom: -59px;
     right: -96px;
+  }
+  .pets__item_poto img {
+    height: 283px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   /*-----pick------*/
   .pickwrapper {

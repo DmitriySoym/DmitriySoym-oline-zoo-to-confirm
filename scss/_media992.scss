@@ -222,6 +222,7 @@
 
       &_name {
         transform: scale(0.75);
+        width: 100%;
       }
 
       &_icon {
@@ -229,6 +230,10 @@
         top: -7px;
         position: relative;
         right: -6px;
+      }
+
+      &_info {
+        height: 47px;
       }
     }
 
@@ -266,10 +271,6 @@
     transform: scale(0.7);
     right: -33px;
     bottom: -27px;
-  }
-
-  .gorilla_name {
-    padding-left: 24px;
   }
 
   /*-----pick------*/

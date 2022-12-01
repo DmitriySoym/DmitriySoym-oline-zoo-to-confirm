@@ -39,6 +39,7 @@
     &_poto {
       transition: all 0.3s ease-in-out;
     }
+
     &_poto img {
       display: block;
       max-width: 100%;
@@ -49,9 +50,7 @@
       background: #fff;
       @extend %flexforitem;
       padding-left: 14px;
-      padding-right: 1px;
       height: 60px;
-      // position: relative;
     }
   }
 }

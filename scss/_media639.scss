@@ -1,4 +1,4 @@
-@media (max-width: 638.98px) {
+@media (max-width: 639.98px) {
   /*-----------header------*/
 
   .headerwrapper {
@@ -122,7 +122,7 @@
     &__items {
       row-gap: 20px;
       justify-content: center;
-      max-width: 500px;
+      max-width: 490px;
     }
 
     &_name {
@@ -144,6 +144,11 @@
     transform: scale(0.37);
     bottom: -59px;
     right: -96px;
+  }
+
+  .pets__item_poto img {
+    height: 283px;
+    object-fit: cover;
   }
 
   /*-----pick------*/
