@@ -90,69 +90,20 @@ const btnright = document
 
 /*------testimonials slider-----*/
 
-const testimonialsslide = document.querySelector(".scrollfortes");
+const cardsContainer = document.querySelector(".testimonials__items"); //
+const testimonialsInput = document.querySelector(".scrollfortes");
+const card = document.querySelector(".testimonials__item");
+const cardWidth = parseInt(getComputedStyle(card).width);
 
-const testimonials = document.querySelector(".testimonials__items");
-
-function slidingTestimonials() {
-  if (window.matchMedia("(min-width: 1179px)").matches) {
-    switch (testimonialsslide.value) {
-      case "0":
-        testimonials.style.left = "0";
-        break;
-      case "1":
-        testimonials.style.left = "-297px";
-        break;
-      case "2":
-        testimonials.style.left = "-594px";
-        break;
-      case "3":
-        testimonials.style.left = "-891px";
-        break;
-      case "4":
-        testimonials.style.left = "-1188px";
-        break;
-      case "5":
-        testimonials.style.left = "-1486px";
-        break;
-      case "6":
-        testimonials.style.left = "-1783px";
-        break;
-      case "7":
-        testimonials.style.left = "-2080px";
-        break;
-    }
-  } else {
-    switch (testimonialsslide.value) {
-      case "0":
-        testimonials.style.left = "0";
-        break;
-      case "1":
-        testimonials.style.left = "-323px";
-        break;
-      case "2":
-        testimonials.style.left = "-646px";
-        break;
-      case "3":
-        testimonials.style.left = "-969px";
-        break;
-      case "4":
-        testimonials.style.left = "-1292px";
-        break;
-      case "5":
-        testimonials.style.left = "-1615px";
-        break;
-      case "6":
-        testimonials.style.left = "-1938px";
-        break;
-      case "7":
-        testimonials.style.left = "-2261px";
-        break;
-    }
-  }
+function moveSlider() {
+  cardsContainer.style.transform = `translateX(-${
+    testimonialsInput.value * (cardWidth + 30)
+  }px)`;
 }
 
-testimonialsslide.addEventListener("input", slidingTestimonials);
+testimonialsInput.addEventListener("input", moveSlider);
+
+/*------testimonials popups-----*/
 const popup = document.querySelector(".popup");
 const popupBody = document.querySelector(".popup__body");
 const popupClose = document.querySelector(".popup__close");
@@ -180,4 +131,4 @@ function showPopup(event) {
   };
 }
 
-testimonials.addEventListener("click", showPopup);
+cardsContainer.addEventListener("click", showPopup);
