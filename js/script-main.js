@@ -90,25 +90,83 @@ const btnright = document
 
 /*------testimonials slider-----*/
 
-const cardsContainer = document.querySelector(".testimonials__items"); //
-const testimonialsInput = document.querySelector(".scrollfortes");
-const card = document.querySelector(".testimonials__item");
-const cardWidth = parseInt(getComputedStyle(card).width);
+const testimonialsslide = document.querySelector(".scrollfortes");
 
-function moveSlider() {
-  cardsContainer.style.transform = `translateX(-${
-    testimonialsInput.value * (cardWidth + 30)
-  }px)`;
+const testimonials = document.querySelector(".testimonials__items");
+const breakpoint = window.matchMedia("(min-width: 992px)");
+
+function setTestimonialsSliderValue() {
+  return (testimonials.style.transform = "translateX(0)");
 }
 
-testimonialsInput.addEventListener("input", moveSlider);
+if (breakpoint.matches) {
+  setTestimonialsSliderValue();
+}
 
-/*------testimonials popups-----*/
+function slidingTestimonials() {
+  if (window.matchMedia("(min-width: 1179px)").matches) {
+    switch (testimonialsslide.value) {
+      case "0":
+        testimonials.style.transform = "translateX(0)";
+        break;
+      case "1":
+        testimonials.style.transform = "translateX(-297px)";
+        break;
+      case "2":
+        testimonials.style.transform = "translateX(-594px)";
+        break;
+      case "3":
+        testimonials.style.transform = "translateX(-891px)";
+        break;
+      case "4":
+        testimonials.style.transform = "translateX(-1188px)";
+        break;
+      case "5":
+        testimonials.style.transform = "translateX(-1486px)";
+        break;
+      case "6":
+        testimonials.style.transform = "translateX(-1783px)";
+        break;
+      case "7":
+        testimonials.style.transform = "translateX(-2080px)";
+        break;
+    }
+  } else {
+    switch (testimonialsslide.value) {
+      case "0":
+        testimonials.style.transform = "translateX(0)";
+        break;
+      case "1":
+        testimonials.style.transform = "translateX(-323px)";
+        break;
+      case "2":
+        testimonials.style.transform = "translateX(-646px)";
+        break;
+      case "3":
+        testimonials.style.transform = "translateX(-969px)";
+        break;
+      case "4":
+        testimonials.style.transform = "translateX(-1292px)";
+        break;
+      case "5":
+        testimonials.style.transform = "translateX(-1615px)";
+        break;
+      case "6":
+        testimonials.style.transform = "translateX(-1938px)";
+        break;
+      case "7":
+        testimonials.style.transform = "translateX(-2261px)";
+        break;
+    }
+  }
+}
+
+testimonialsslide.addEventListener("input", slidingTestimonials);
 const popup = document.querySelector(".popup");
 const popupBody = document.querySelector(".popup__body");
 const popupClose = document.querySelector(".popup__close");
 
-function showPopup(event) {
+testimonials.addEventListener("click", function (event) {
   const testimonial = event.target.closest(".testimonials__item");
   if (testimonial) {
     testimonial.classList.add("open");
@@ -129,6 +187,4 @@ function showPopup(event) {
     testimonial.classList.remove("open");
     popup.classList.remove("open");
   };
-}
-
-cardsContainer.addEventListener("click", showPopup);
+});

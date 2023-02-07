@@ -1045,7 +1045,6 @@ h1 {
   width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1308,7 +1307,6 @@ input[type=number] {
   line-height: 18px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   color: #ffffff;
 }
@@ -1980,7 +1978,7 @@ input[type=number] {
     display: none;
   }
   .greenarrow1,
-.greenarrow2 {
+  .greenarrow2 {
     display: block;
     position: absolute;
   }
@@ -2032,7 +2030,8 @@ input[type=number] {
     padding: 3px 18px 1px 16px;
   }
   .testimonials_scroll {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
   .dot {
     margin: 0 3px 0px;
@@ -2183,7 +2182,7 @@ input[type=number] {
     width: 524px;
   }
   .secondamount,
-.thirdamount {
+  .thirdamount {
     display: none;
   }
   .moneys span {
@@ -2357,7 +2356,7 @@ input[type=number] {
   }
   /*-----pets------*/
   .prew,
-.next {
+  .next {
     display: none;
   }
   .petswrapper {
@@ -2787,8 +2786,7 @@ input[type=number] {
 
 .pets__items {
   display: none;
-  -webkit-animation: 1s ease-in-out;
-          animation: 1s ease-in-out;
+  animation: 1s ease-in-out;
 }
 
 .pets__items.activeslide {
@@ -2807,34 +2805,21 @@ input[type=number] {
 }
 
 .to-left {
-  -webkit-animation-name: left;
-          animation-name: left;
+  animation-name: left;
 }
 
 .from-right {
-  -webkit-animation-name: right;
-          animation-name: right;
+  animation-name: right;
 }
 
 .to-right {
-  -webkit-animation-name: right;
-          animation-name: right;
+  animation-name: right;
   animation-direction: reverse;
 }
 
 .from-left {
-  -webkit-animation-name: left;
-          animation-name: left;
+  animation-name: left;
   animation-direction: reverse;
-}
-
-@-webkit-keyframes left {
-  from {
-    left: 0px;
-  }
-  to {
-    left: -100%;
-  }
 }
 
 @keyframes left {
@@ -2843,14 +2828,6 @@ input[type=number] {
   }
   to {
     left: -100%;
-  }
-}
-@-webkit-keyframes right {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0%;
   }
 }
 @keyframes right {

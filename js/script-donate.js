@@ -48,7 +48,7 @@ const moneySum = document.querySelector(".moneysum");
 moneySum.value = 100;
 
 const amount = document.getElementsByName("donate_amount");
-console.log(amount);
+// console.log(amount);
 amount.forEach((el) => {
   el.addEventListener("click", function () {
     moneySum.value = el.value;
